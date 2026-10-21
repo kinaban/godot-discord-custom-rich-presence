@@ -3,8 +3,8 @@ class_name RunningProcess
 extends RefCounted
 
 
-static func _get_path_list_linuxbsd() -> Array:
-	var path_list := []
+static func _get_path_list_linuxbsd() -> PackedStringArray:
+	var path_list := PackedStringArray()
 	var proc_dir := DirAccess.open("/proc")
 	
 	proc_dir.list_dir_begin()
@@ -31,8 +31,8 @@ static func _get_path_list_linuxbsd() -> Array:
 	return path_list
 
 
-static func get_path_list() -> Array:
-	var list := []
+static func get_path_list() -> PackedStringArray:
+	var list := PackedStringArray()
 	
 	if OS.has_feature("linuxbsd"):
 		return _get_path_list_linuxbsd()
