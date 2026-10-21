@@ -29,3 +29,13 @@ static func _get_path_list_linuxbsd() -> Array:
 	
 	proc_dir.list_dir_end()
 	return path_list
+
+
+static func get_path_list() -> Array:
+	var list := []
+	
+	if OS.has_feature("linuxbsd"):
+		return _get_path_list_linuxbsd()
+	
+	push_error("Your OS '%s' is not supported." % OS.get_name())
+	return list
