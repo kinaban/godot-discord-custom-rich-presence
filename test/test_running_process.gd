@@ -6,7 +6,7 @@ func _ready() -> void:
 	var list := RunningProcess.get_path_list()
 	var elapsed := Time.get_ticks_msec() - start
 	
-	prints("Elapsed:", elapsed)
+	prints("Elapsed (msec):", elapsed)
 	prints("Size:", list.size())
 	
 	for i in list.size():
