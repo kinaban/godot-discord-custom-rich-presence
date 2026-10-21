@@ -3,7 +3,7 @@ class_name RunningProcess
 extends RefCounted
 
 
-static func _get_path_list_linux() -> Array:
+static func _get_path_list_linuxbsd() -> Array:
 	var path_list := []
 	var proc_dir := DirAccess.open("/proc")
 	
