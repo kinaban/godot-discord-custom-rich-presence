@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cafcm6m3aewf5"]
 
+[ext_resource type="Script" uid="uid://dvria4v4ayew2" path="res://main.gd" id="1_ig7tw"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sykd2"]
 bg_color = Color(0.21176471, 0.23921569, 0.2901961, 1)
 
@@ -14,23 +16,36 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_sykd2")
+script = ExtResource("1_ig7tw")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1696722011]
 layout_mode = 2
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
 
 [node name="content" type="VBoxContainer" parent="MarginContainer" unique_id=599035564]
 layout_mode = 2
+theme_override_constants/separation = 12
 
 [node name="ProcessOption" type="OptionButton" parent="MarginContainer/content" unique_id=321175961]
-custom_minimum_size = Vector2(0, 40)
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_ig7tw")
 selected = 0
+fit_to_longest_item = false
 search_bar_enabled = true
 item_count = 1
 popup/item_0/text = "Select a process"
 popup/item_0/id = 0
+popup/item_0/separator = true
+
+[node name="RefreshProcessButton" type="Button" parent="MarginContainer/content" unique_id=2013077457]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "Refresh Process List"
+
+[connection signal="pressed" from="MarginContainer/content/RefreshProcessButton" to="." method="_on_refresh_process_button_pressed"]
