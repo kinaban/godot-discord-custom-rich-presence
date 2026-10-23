@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://duh4i01kgarpi"]
+
+[ext_resource type="Script" uid="uid://bay8rcl0dpaar" path="res://src/window_resizer/window_resizer.gd" id="1_68310"]
+
+[node name="WindowResizer" type="Node" unique_id=1408757962]
+script = ExtResource("1_68310")
+pc_override = Vector2i(900, 640)
