@@ -7,12 +7,9 @@ extends Node
 @export var pc_override: Vector2i
 
 
-func _ready() -> void:
+func _enter_tree() -> void:
 	if pc_override != Vector2i.ZERO:
 		get_window().size = pc_override
-	
-	else:
-		return
 	
 	## Centers the window
 	var window_half_size := DisplayServer.window_get_size() / 2.0
@@ -20,3 +17,6 @@ func _ready() -> void:
 	var position := screen_half_size - window_half_size
 	
 	DisplayServer.window_set_position(position)
+	
+	## Cleans up, since this no longer serves any purpose.
+	queue_free()
