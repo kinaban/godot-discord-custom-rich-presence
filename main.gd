@@ -20,4 +20,4 @@ func refresh() -> void:
 	var path_list := RunningProcess.get_path_list()
 	
 	for path in path_list:
-		process_option.add_item(path)
+		process_option.add_item("Process: " + path)
