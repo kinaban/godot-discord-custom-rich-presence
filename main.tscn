@@ -29,6 +29,18 @@ theme_override_constants/margin_bottom = 12
 layout_mode = 2
 theme_override_constants/separation = 12
 
+[node name="Application" type="LineEdit" parent="MarginContainer/content" unique_id=595419863]
+layout_mode = 2
+placeholder_text = "Application ID"
+
+[node name="Details" type="LineEdit" parent="MarginContainer/content" unique_id=1699511620]
+layout_mode = 2
+placeholder_text = "Details"
+
+[node name="LargeImageKey" type="LineEdit" parent="MarginContainer/content" unique_id=1938082098]
+layout_mode = 2
+placeholder_text = "Large Image Key"
+
 [node name="ProcessOption" type="OptionButton" parent="MarginContainer/content" unique_id=321175961]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 30)
