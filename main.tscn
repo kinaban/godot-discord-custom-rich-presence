@@ -35,6 +35,23 @@ custom_minimum_size = Vector2(0, 35)
 layout_mode = 2
 placeholder_text = "Application ID"
 
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ig7tw")
+selected = 0
+fit_to_longest_item = false
+search_bar_enabled = true
+item_count = 1
+popup/item_0/text = "Select a process"
+popup/item_0/id = 0
+
+[node name="RefreshProcessButton" type="Button" parent="MarginContainer/content" unique_id=2013077457]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Refresh Process List"
+
 [node name="DetailsEdit" type="LineEdit" parent="MarginContainer/content" unique_id=1699511620]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 35)
@@ -52,23 +69,13 @@ custom_minimum_size = Vector2(0, 35)
 layout_mode = 2
 placeholder_text = "Large Image Key"
 
-[node name="ProcessOption" type="OptionButton" parent="MarginContainer/content" unique_id=321175961]
+[node name="TimestampOption" type="OptionButton" parent="MarginContainer/content" unique_id=1435060952]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 35)
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_ig7tw")
 selected = 0
-fit_to_longest_item = false
-search_bar_enabled = true
 item_count = 1
-popup/item_0/text = "Select a process"
+popup/item_0/text = "Timestamp: On GDCRP startup"
 popup/item_0/id = 0
-popup/item_0/separator = true
-
-[node name="RefreshProcessButton" type="Button" parent="MarginContainer/content" unique_id=2013077457]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-text = "Refresh Process List"
 
 [connection signal="pressed" from="MarginContainer/content/RefreshProcessButton" to="." method="_on_refresh_process_button_pressed"]
